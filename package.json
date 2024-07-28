@@ -17,6 +17,7 @@
     "buffer": "^6.0.3",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
+    "serve": "^14.2.3",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.6.2",
