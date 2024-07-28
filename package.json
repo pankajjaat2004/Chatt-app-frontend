@@ -4,14 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev":"vite",
-    {
-  "name": "chat-app-client-new",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
     "dev": "vite",
+    "start":"vite",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint --max-warnings=0 src",
