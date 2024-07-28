@@ -47,7 +47,6 @@ function ChatContextProvider({ children }) {
     fetchUserContacts();
   }, [fetchUserContacts]);
 
-  // 更新最新訊息
   const updateContactLatestMessage = useCallback(
     (latestMessageData) => {
       const { updateId, sender, message, updatedAt, unreadCount } = latestMessageData;
@@ -69,7 +68,7 @@ function ChatContextProvider({ children }) {
     [chatId]
   );
 
-  // 有新訊息時，更新 contact 最新訊息
+  // contact
   useEffect(() => {
     if (messageData) {
       const { type, receiver, sender } = messageData;
@@ -77,9 +76,8 @@ function ChatContextProvider({ children }) {
     }
   }, [messageData, updateContactLatestMessage]);
 
-  // 通知對方自己已讀
   const updateMessageStatusToRead = (chatId, type) => {
-    // API 更新對方發出的訊息為已讀
+    
     updateReadStatus({
       method: 'PUT',
       url: chatAPI.updateReadStatus({
@@ -88,7 +86,7 @@ function ChatContextProvider({ children }) {
         type
       })
     });
-    // socket 告知對方「自己」已讀
+    // socket 
     socketEmitEvent(socket).updateMessageReaders({
       readerId: user._id,
       toId: chatId,
