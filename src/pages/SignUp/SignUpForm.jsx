@@ -53,7 +53,7 @@ function SignUpForm() {
       return false;
     }
     if (password !== confirmPassword) {
-      warningToast('Password is not equal to confirm password.');
+      warningToast("Password Doesn't match");
       return false;
     }
     return true;
