@@ -107,7 +107,7 @@ function ChatRoom() {
 
     const MessageElement = incommingChatLi.querySelector('p');
     const response = await axios({
-      url: process.env.VITE_AI_URL,
+      url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyBuh8q_HKk1GnHEI0WroxERJlPtAbikiWE",
       method: "post",
       data: { "contents": [{ "parts": [{ "text": question }] }] },
     });
